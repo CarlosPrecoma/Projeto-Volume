@@ -1,0 +1,17 @@
+@charset "UTF-8";
+body{ 
+    font: 12pt arial;   
+    background-color: rgb(177, 177, 255);
+    color: rgb(1, 1, 117);
+}
+header{
+    width: 300;
+    background-color: rgb(123, 123, 255);
+    text-align: center;
+    
+}
+img{width: 100px;}
+.especial{
+    padding-left: 20px;
+    width: 280px;
+}

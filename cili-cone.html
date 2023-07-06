@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cilindro + Cone</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Calculo de volume do Cilindro com Cone</h1>
+    </header>
+    <img src="imagens/cilin conico-m.png" class="especial" alt="">
+    <p>
+        Entre com as medidas em cm 
+        <button type="submit" onclick="calc()">Calcular</button>
+    </p>
+    <p>
+        Altura cilindro -- h1:
+        <input type="number" name="alt" id="ialt">
+    </p>
+    <p>
+        Altura cone -- h2:
+        <input type="number" name="alt2" id="ialt2">
+    </p>
+    <p>
+        Diametro -- d:
+        <input type="number" name="dia" id="dia">
+    </p>
+    
+    <div id="res"></div>
+    <script>
+        function calc() {
+            let h1 = Number(document.getElementById('ialt').value)
+            let h2 = Number(document.getElementById('ialt2').value)
+            let d = Number(document.getElementById('dia').value)
+            let res = document.getElementById('res')
+            let r = d/2
+            let vcili  = 3.1416 * (r*r) * h1
+            let vcone  = ((3.1416 * (r*r)) * h2 ) / 3 
+            let tot = ((3.1416 * (r*r)) * h1) + ((3.1416 * (r*r)) * h2 ) / 3 
+            
+        res.innerHTML=`Com as medidas informadas o volume calculado do cilindro é <strong><mark>${(vcili*0.001) .toFixed(2)}</mark></strong> litros e o volume do cone é <strong><mark>${(vcone*0.001) .toFixed(2)} </mark></strong>litros. O volume total é <strong><mark>${(tot*0.001 ).toFixed(2)} </mark></strong>litros.`
+        }
+        
+    </script>
+</body>
+</html>

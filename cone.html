@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cone</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Calculo de volume do Cone</h1>
+    </header>
+    <img src="imagens/co-m.png" class="especial" alt="">
+    <p>
+        Entre com as medidas em cm 
+        <button type="submit" onclick="calc()">Calcular</button>
+    </p>
+    <p>
+        Altura -- h:
+        <input type="number" name="alt" id="ialt">
+    </p>
+    <p>
+        Diametro -- d:
+        <input type="number" name="dia" id="dia">
+    </p>
+    
+    <div id="res"></div>
+    <script>
+        function calc() {
+            let h = Number(document.getElementById('ialt').value)
+            let d = Number(document.getElementById('dia').value)
+            let res = document.getElementById('res')
+            let r = d/2
+            let v  =((3.1416 * (r*r)) * h ) / 3 
+        res.innerHTML=`Com as medidas informadas o volume calculado é <strong><mark>${(v*0.001) .toFixed(2)}</mark> litros! </strong>`
+        }
+        
+    </script>
+</body>
+</html>
